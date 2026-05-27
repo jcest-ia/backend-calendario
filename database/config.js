@@ -1,14 +1,10 @@
 const mongoose = require('mongoose');
 
-// Suprimir advertencia de URL deprecada (funciona correctamente)
-process.noDeprecation = false;
-
 const dbConnection = async () => {
 
     try {
 
-        await mongoose.connect(process.env.DB_CNN, {
-        });
+        await mongoose.connect(process.env.DB_CNN);
 
         console.log('DB Online');
 
